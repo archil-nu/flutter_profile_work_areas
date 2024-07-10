@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '/app/screens/login_screen.dart';
+import 'work_areas/login_screen.dart';
 import '/model/business/business.dart';
 import '/model/business/configure_business.dart';
 

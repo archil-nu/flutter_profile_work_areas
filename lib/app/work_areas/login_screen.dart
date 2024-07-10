@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '/app/main_app.dart';
-import '/app/components/alert_widget.dart';
+import '../utils/alert_widget.dart';
 
 import '/model/user_accounts/user_account.dart';
 
@@ -25,19 +25,23 @@ class _LoginScreenStateful extends State<LoginScreen> {
     void handleLogin() {
       UserAccount? loginUser = authenticate(username, password);
       if (loginUser != null) {
-        print(loginUser.role);
-
+        // Form reset
         username = '';
         password = '';
-
         formKey.currentState!.reset();
 
-        // await showDialog(
-        //     context: context,
-        //     builder: (BuildContext context) => AlertWidget(
-        //           title: 'Success',
-        //           content: 'Login successful!',
-        //         ));
+        // Success message
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text('Successful login!'),
+          padding: EdgeInsets.all(20),
+          margin: EdgeInsets.all(40),
+          behavior: SnackBarBehavior.floating,
+        ));
+
+        // Find user's work area and navigate there
+        var userWorkArea = loginUser.workArea;
+        Navigator.push(context,
+            MaterialPageRoute(builder: (BuildContext context) => userWorkArea));
       }
     }
 

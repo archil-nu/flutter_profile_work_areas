@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import '/model/persons/person.dart';
 
 abstract class Profile {
@@ -5,6 +6,7 @@ abstract class Profile {
   Profile(Person person) : _person = person;
 
   String get role;
+  StatelessWidget get workArea;
 
   Person get person => _person;
 

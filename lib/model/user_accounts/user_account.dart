@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import '/model/profiles/profile.dart';
 
 class UserAccount {
@@ -19,6 +21,7 @@ class UserAccount {
           (_password == password));
 
   String get role => _profile.role;
+  StatelessWidget get workArea => _profile.workArea;
   Profile get associatedPersonProfile => _profile;
 
   set updatePassword(String newPassword) => _password = newPassword;
