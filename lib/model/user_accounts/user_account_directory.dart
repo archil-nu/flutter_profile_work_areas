@@ -1,5 +1,5 @@
-import 'package:flutter_profile_work_areas/model/user_accounts/user_account.dart';
-import 'package:flutter_profile_work_areas/model/profiles/profile.dart';
+import '/model/user_accounts/user_account.dart';
+import '/model/profiles/profile.dart';
 
 class UserAccountDirectory {
   final List<UserAccount> _userAccounts =

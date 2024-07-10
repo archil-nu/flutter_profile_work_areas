@@ -1,7 +1,7 @@
-import 'package:flutter_profile_work_areas/model/user_accounts/user_account_directory.dart';
-import 'package:flutter_profile_work_areas/model/persons/person_directory.dart';
-import 'package:flutter_profile_work_areas/model/profiles/employee_directory.dart';
-import 'package:flutter_profile_work_areas/model/profiles/student_directory.dart';
+import '/model/user_accounts/user_account_directory.dart';
+import '/model/persons/person_directory.dart';
+import '/model/profiles/employee_directory.dart';
+import '/model/profiles/student_directory.dart';
 
 class Business {
   String _name;

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:flutter_lab_2/app/screens/navigation_screen.dart';
+import '/app/screens/login_screen.dart';
+import '/model/business/business.dart';
+import '/model/business/configure_business.dart';
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -11,7 +13,7 @@ class MainApp extends StatelessWidget {
     return ChangeNotifierProvider(
         create: (context) => MainAppState(),
         child: MaterialApp(
-          title: "Lab 2",
+          title: "Profile Work Area",
           theme: ThemeData(
               useMaterial3: true,
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.red)),

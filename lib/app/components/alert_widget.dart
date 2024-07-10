@@ -6,7 +6,7 @@ class AlertWidget extends StatelessWidget {
   final bool closeParent;
 
   const AlertWidget(
-      {required this.title, required this.content, required this.closeParent});
+      {required this.title, required this.content, this.closeParent = false});
 
   @override
   Widget build(BuildContext context) {

@@ -1,16 +1,16 @@
-import 'package:flutter_profile_work_areas/model/business/business.dart';
-import 'package:flutter_profile_work_areas/model/persons/person.dart';
-import 'package:flutter_profile_work_areas/model/persons/person_directory.dart';
-import 'package:flutter_profile_work_areas/model/profiles/employee_profile.dart';
-import 'package:flutter_profile_work_areas/model/profiles/employee_directory.dart';
-import 'package:flutter_profile_work_areas/model/profiles/student_profile.dart';
-import 'package:flutter_profile_work_areas/model/profiles/student_directory.dart';
-import 'package:flutter_profile_work_areas/model/user_accounts/user_account.dart';
-import 'package:flutter_profile_work_areas/model/user_accounts/user_account_directory.dart';
+import '/model/business/business.dart';
+import '/model/persons/person.dart';
+import '/model/persons/person_directory.dart';
+import '/model/profiles/employee_profile.dart';
+import '/model/profiles/employee_directory.dart';
+import '/model/profiles/student_profile.dart';
+import '/model/profiles/student_directory.dart';
+import '/model/user_accounts/user_account.dart';
+import '/model/user_accounts/user_account_directory.dart';
 
 class ConfigureBusiness {
   static Business initialize() {
-    Business business = new Business("Information Systems");
+    Business business = Business("Information Systems");
 
 // Create Persons
     PersonDirectory personDirectory = business.personDirectory;

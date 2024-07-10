@@ -1,4 +1,4 @@
-import 'package:flutter_profile_work_areas/model/account.dart';
+import '/model/account.dart';
 
 class AccountDirectory {
   final List<Account> _accounts = List<Account>.empty(growable: true);

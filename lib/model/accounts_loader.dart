@@ -1,4 +1,4 @@
-import 'package:flutter_profile_work_areas/model/account_directory.dart';
+import '/model/account_directory.dart';
 
 class AccountsLoader {
   static AccountDirectory loadAccounts() {

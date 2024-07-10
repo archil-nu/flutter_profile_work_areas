@@ -1,4 +1,4 @@
-import 'package:flutter_profile_work_areas/model/persons/person.dart';
+import '/model/persons/person.dart';
 
 abstract class Profile {
   Person _person;

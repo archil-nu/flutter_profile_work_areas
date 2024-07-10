@@ -1,4 +1,4 @@
-import 'package:flutter_profile_work_areas/model/profiles/profile.dart';
+import '/model/profiles/profile.dart';
 
 class UserAccount {
   Profile _profile;

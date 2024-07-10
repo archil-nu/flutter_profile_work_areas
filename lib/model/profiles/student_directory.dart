@@ -1,5 +1,5 @@
-import 'package:flutter_profile_work_areas/model/profiles/student_profile.dart';
-import 'package:flutter_profile_work_areas/model/persons/person.dart';
+import '/model/profiles/student_profile.dart';
+import '/model/persons/person.dart';
 
 class StudentDirectory {
   final List<StudentProfile> _students =

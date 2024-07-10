@@ -1,5 +1,5 @@
-import 'package:flutter_profile_work_areas/model/profiles/profile.dart';
-import 'package:flutter_profile_work_areas/model/persons/person.dart';
+import '/model/profiles/profile.dart';
+import '/model/persons/person.dart';
 
 class StudentProfile extends Profile {
   StudentProfile(Person person) : super(person);
