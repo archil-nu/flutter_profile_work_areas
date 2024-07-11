@@ -23,6 +23,7 @@ class UserAccount {
   String get role => _profile.role;
   StatelessWidget get workArea => _profile.workArea;
   Profile get associatedPersonProfile => _profile;
+  String get fullname => _profile.person.personId;
 
   set updatePassword(String newPassword) => _password = newPassword;
 }

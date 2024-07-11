@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_lab_2/app/screens/bank_accounts_screen.dart';
-// import 'package:flutter_lab_2/app/screens/create_account_screen.dart';
-// import 'package:flutter_lab_2/app/screens/not_implemented_screen.dart';
+import 'package:flutter_profile_work_areas/app/work_areas/admin_role/manage_user_accounts_panel.dart';
+import '/app/utils/not_implemented.dart';
 
 class AdminMainWorkArea extends StatelessWidget {
   @override
@@ -14,9 +13,23 @@ class AdminMainWorkArea extends StatelessWidget {
     var navigation = NavigationRail(
       extended: true,
       destinations: [
+        //0
         NavigationRailDestination(
-            icon: Icon(Icons.monetization_on), label: Text('Accounts')),
-        NavigationRailDestination(icon: Icon(Icons.add), label: Text('Create')),
+            icon: Icon(Icons.supervised_user_circle_rounded),
+            label: Text('Administer User Accounts')),
+        //1
+        NavigationRailDestination(
+            icon: Icon(Icons.people), label: Text('Register Persons')),
+        //2
+        NavigationRailDestination(
+            icon: Icon(Icons.emoji_people), label: Text('Manage Faculty')),
+        //3
+        NavigationRailDestination(
+            icon: Icon(Icons.school), label: Text('Manage Students')),
+        //4
+        NavigationRailDestination(
+            icon: Icon(Icons.verified_user), label: Text('My Profile')),
+        //5
         NavigationRailDestination(
             icon: Icon(Icons.logout), label: Text('Sign Out'))
       ],
@@ -27,14 +40,16 @@ class AdminMainWorkArea extends StatelessWidget {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (BuildContext context) => Placeholder()));
+                    builder: (BuildContext context) =>
+                        ManageUserAccountsPage()));
           case 1:
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (BuildContext context) => Placeholder()));
-          default:
+                    builder: (BuildContext context) => NotImplemented()));
+          case 5:
             Navigator.pop(context);
+          default:
         }
       },
       backgroundColor: colorScheme.surfaceContainerHigh,

@@ -16,7 +16,9 @@ class MainApp extends StatelessWidget {
           title: "Profile Work Area",
           theme: ThemeData(
               useMaterial3: true,
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.red)),
+              colorScheme: ColorScheme.fromSeed(
+                  seedColor: Color.fromARGB(255, 0, 153, 153),
+                  primaryContainer: Color.fromARGB(255, 0, 153, 153))),
           home: LoginScreen(),
         ));
   }

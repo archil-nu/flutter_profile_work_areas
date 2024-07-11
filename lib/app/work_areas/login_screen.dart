@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '/app/main_app.dart';
-import '../utils/alert_widget.dart';
 
 import '/model/user_accounts/user_account.dart';
 
@@ -24,12 +23,12 @@ class _LoginScreenStateful extends State<LoginScreen> {
 
     void handleLogin() {
       UserAccount? loginUser = authenticate(username, password);
-      if (loginUser != null) {
-        // Form reset
-        username = '';
-        password = '';
-        formKey.currentState!.reset();
+      // Form reset
+      username = '';
+      password = '';
+      formKey.currentState!.reset();
 
+      if (loginUser != null) {
         // Success message
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
           content: Text('Successful login!'),
@@ -42,6 +41,13 @@ class _LoginScreenStateful extends State<LoginScreen> {
         var userWorkArea = loginUser.workArea;
         Navigator.push(context,
             MaterialPageRoute(builder: (BuildContext context) => userWorkArea));
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text('Login error! Check you credentials and try again.'),
+          padding: EdgeInsets.all(20),
+          margin: EdgeInsets.all(40),
+          behavior: SnackBarBehavior.floating,
+        ));
       }
     }
 
@@ -67,14 +73,20 @@ class _LoginScreenStateful extends State<LoginScreen> {
                 TextFormField(
                   initialValue: username,
                   decoration: InputDecoration(
-                      labelText: 'Username', icon: Icon(Icons.person)),
+                      labelText: 'Username',
+                      icon: Icon(Icons.person),
+                      labelStyle: TextStyle(color: Colors.black),
+                      iconColor: Colors.black),
                   onChanged: (value) => username = value,
                   autofocus: true,
                 ),
                 SizedBox(height: 20.0),
                 TextFormField(
                     decoration: InputDecoration(
-                        labelText: 'Password', icon: Icon(Icons.password)),
+                        labelText: 'Password',
+                        icon: Icon(Icons.password),
+                        labelStyle: TextStyle(color: Colors.black),
+                        iconColor: Colors.black),
                     onChanged: (value) => password = value,
                     obscureText: true),
                 SizedBox(height: 20.0),
@@ -83,19 +95,20 @@ class _LoginScreenStateful extends State<LoginScreen> {
 
     var logo = Padding(
         padding: EdgeInsets.symmetric(vertical: 40.0),
-        child: Image.asset('assets/nu-logo.png'));
+        child: Image.asset('assets/nu-logo-black.png'));
 
     var slogan = Text.rich(
         TextSpan(
           text: 'Education going ', // default text style
           children: <TextSpan>[
-            TextSpan(text: 'digital', style: TextStyle(color: Colors.red)),
+            TextSpan(
+                text: 'digital', style: TextStyle(color: Colors.blue.shade800)),
           ],
         ),
         style: GoogleFonts.getFont('Kalam').copyWith(fontSize: 25.0));
 
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Color.fromARGB(255, 0, 153, 153),
         body: Center(
           child: ConstrainedBox(
               constraints: BoxConstraints.expand(width: 400.0),
