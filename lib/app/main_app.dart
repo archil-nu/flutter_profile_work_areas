@@ -27,29 +27,5 @@ class MainApp extends StatelessWidget {
 class MainAppState extends ChangeNotifier {
   Business business = ConfigureBusiness.initialize();
 
-  // void newAccount(String accountNumber, String bankName, String routingNumber,
-  //     int balance) {
-  //   accountDirectory.newAccount(
-  //       accountNumber, bankName, routingNumber, balance);
-  //   notifyListeners();
-  // }
-
-  // Account? getAccount(int index) {
-  //   return accountDirectory.getAccount(index);
-  // }
-
-  // void updateAccount(int index, String accountNumber, String bankName,
-  //     String routingNumber, int balance) {
-  //   Account? selectedAccount = accountDirectory.getAccount(index);
-  //   selectedAccount?.accountNumber = accountNumber;
-  //   selectedAccount?.bankName = bankName;
-  //   selectedAccount?.routingNumber = routingNumber;
-  //   selectedAccount?.balance = balance;
-  //   notifyListeners();
-  // }
-
-  // void deleteAccount(int index) {
-  //   accountDirectory.deleteAccount(index);
-  //   notifyListeners();
-  // }
+  void notifyStateChanges() => notifyListeners();
 }

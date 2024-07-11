@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_profile_work_areas/app/work_areas/admin_role/manage_user_accounts_panel.dart';
+import '/app/work_areas/admin_role/manage_user_accounts_panel.dart';
 import '/app/utils/not_implemented.dart';
 
 class AdminMainWorkArea extends StatelessWidget {
